@@ -1,0 +1,105 @@
+#:kivy 2.0
+# Leave room for the phone's status bar (Android 15+ draws apps underneath it).
+#:set SAFE_TOP dp(56)
+# Screen layouts. Keeping layout here and behaviour in Python
+# (rsh/ui/screens/*.py) is Kivy's version of "separation of concerns".
+
+<HomeScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: dp(32), SAFE_TOP, dp(32), dp(32)
+        spacing: dp(20)
+        Widget:
+        Label:
+            text: "RealSoundHero"
+            font_size: sp(40)
+            bold: True
+            size_hint_y: None
+            height: dp(64)
+        Label:
+            text: "Play your real instrument"
+            font_size: sp(18)
+            color: 0.7, 0.7, 0.75, 1
+            size_hint_y: None
+            height: dp(32)
+        Label:
+            text: root.status_text
+            font_size: sp(16)
+            color: 0.5, 0.8, 0.6, 1
+            size_hint_y: None
+            height: dp(32)
+        Widget:
+        MenuButton:
+            text: "Tuner"
+            on_release: app.go_to("tuner")
+        MenuButton:
+            text: "Play (coming soon)"
+            on_release: app.go_to("play")
+        Widget:
+
+<TunerScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: dp(24), SAFE_TOP, dp(24), dp(24)
+        spacing: dp(12)
+        Label:
+            text: "Tuner - " + (root.instrument.display_name if root.instrument else "")
+            font_size: sp(22)
+            size_hint_y: None
+            height: dp(48)
+        Label:
+            text: root.note_text
+            font_size: sp(120)
+            bold: True
+            color: root.note_color
+        Label:
+            text: root.frequency_text
+            font_size: sp(24)
+            size_hint_y: None
+            height: dp(40)
+        Label:
+            text: root.cents_text
+            font_size: sp(20)
+            color: root.note_color
+            size_hint_y: None
+            height: dp(36)
+        Label:
+            text: root.string_text
+            font_size: sp(16)
+            color: 0.7, 0.7, 0.75, 1
+            size_hint_y: None
+            height: dp(32)
+        Label:
+            text: "Mic level"
+            font_size: sp(14)
+            color: 0.6, 0.6, 0.65, 1
+            size_hint_y: None
+            height: dp(24)
+        LevelMeter:
+            level: root.level
+            size_hint_y: None
+            height: dp(28)
+        Widget:
+            size_hint_y: None
+            height: dp(12)
+        MenuButton:
+            text: "Back"
+            on_release: app.go_to("home")
+
+<PlayScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        padding: dp(32), SAFE_TOP, dp(32), dp(32)
+        spacing: dp(20)
+        Widget:
+        Label:
+            text: "Game screen goes here!"
+            font_size: sp(28)
+        Label:
+            text: "See README > TODO, Milestones 4-5"
+            font_size: sp(16)
+            color: 0.7, 0.7, 0.75, 1
+        Widget:
+        MenuButton:
+            text: "Back"
+            on_release: app.go_to("home")

@@ -1,0 +1,14 @@
+# Build output (huge, never commit these)
+.buildozer/
+bin/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store

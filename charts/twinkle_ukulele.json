@@ -1,0 +1,84 @@
+{
+  "title": "Twinkle Twinkle Little Star",
+  "artist": "Traditional",
+  "instrument": "ukulele",
+  "bpm": 90,
+  "_comment": "time/duration in seconds. 3 s lead-in. Each note gives either 'note' or 'chord'. Uke fingering: C4=open C string, D4=C string fret 2, E4=open E, F4=E string fret 1, G4=open G, A4=open A.",
+  "notes": [
+    {
+      "time": 3.0,
+      "duration": 0.6,
+      "note": "C4"
+    },
+    {
+      "time": 3.667,
+      "duration": 0.6,
+      "note": "C4"
+    },
+    {
+      "time": 4.333,
+      "duration": 0.6,
+      "note": "G4"
+    },
+    {
+      "time": 5.0,
+      "duration": 0.6,
+      "note": "G4"
+    },
+    {
+      "time": 5.667,
+      "duration": 0.6,
+      "note": "A4"
+    },
+    {
+      "time": 6.333,
+      "duration": 0.6,
+      "note": "A4"
+    },
+    {
+      "time": 7.0,
+      "duration": 1.2,
+      "note": "G4"
+    },
+    {
+      "time": 8.333,
+      "duration": 0.6,
+      "note": "F4"
+    },
+    {
+      "time": 9.0,
+      "duration": 0.6,
+      "note": "F4"
+    },
+    {
+      "time": 9.667,
+      "duration": 0.6,
+      "note": "E4"
+    },
+    {
+      "time": 10.333,
+      "duration": 0.6,
+      "note": "E4"
+    },
+    {
+      "time": 11.0,
+      "duration": 0.6,
+      "note": "D4"
+    },
+    {
+      "time": 11.667,
+      "duration": 0.6,
+      "note": "D4"
+    },
+    {
+      "time": 12.333,
+      "duration": 1.2,
+      "note": "C4"
+    },
+    {
+      "time": 13.667,
+      "duration": 1.333,
+      "chord": "C"
+    }
+  ]
+}

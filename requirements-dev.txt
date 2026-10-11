@@ -1,0 +1,8 @@
+# Tools for working on your computer (not what goes into the phone app;
+# that list is "requirements" in buildozer.spec).
+kivy==2.3.1
+numpy
+pytest
+sounddevice   # optional: lets the desktop app use your laptop microphone
+buildozer==1.6.0
+cython
